@@ -31,13 +31,12 @@ namespace CocomoProject
 
         private void GetInfoBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            // попередження
             if (string.IsNullOrWhiteSpace(txtCodeSize.Text))
             {
                 MessageBox.Show("Вы не ввели кол-во строк кода!", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
-
 
             int type = comboBoxProjectType.SelectedIndex; // определяем тип проекта
             int codeSize = int.Parse(txtCodeSize.Text); // строк кода
